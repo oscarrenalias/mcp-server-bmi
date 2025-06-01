@@ -28,6 +28,8 @@ Response:
     - Class 2 Obesity (35 to less than 40)
     - Class 3 Severe obesity (40 or greater)
 
+# Using the server
+
 ## Visual Studio Code
 
 Add these lines to ```settings.json```:
@@ -35,21 +37,18 @@ Add these lines to ```settings.json```:
 ```json
 {
     "servers": {
-        [... other MCP servers ...]
-        "mcp-server-bmi": {
-          "command": "docker",
-          "args": [
-             "run",
-             "-i",
-              "--rm",
-             "ghcr.io/oscarrenalias/mcp-server-bmi:latest"
-           ]
-        }
+      "command": "docker",
+      "args": [
+         "run",
+         "-i",
+          "--rm",
+         "ghcr.io/oscarrenalias/mcp-server-bmi:latest"
+       ]
+      }
     }
-}
+  }
 ```
 
-# Implementation
 
 Built on Python with FastMCP, packaged as a Docker container and published to the GitHub registry.
 
@@ -80,7 +79,3 @@ uv run test_bmi.py
 # Development
 
 Use the provided DevContainer for a ready-to-go development environment in VS Code.
-
-# Connecting to an LLM
-
-In progress.
